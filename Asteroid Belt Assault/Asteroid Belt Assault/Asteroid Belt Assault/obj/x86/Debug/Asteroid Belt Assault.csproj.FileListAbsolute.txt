@@ -58,3 +58,21 @@ C:\Users\EAHSCS\Downloads\0669_Code\0669_Code\Chapter05\Code\Asteroid Belt Assau
 C:\Users\EAHSCS\Downloads\0669_Code\0669_Code\Chapter05\Code\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\EAHSCS\Downloads\0669_Code\0669_Code\Chapter05\Code\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Asteroid Belt Assault.exe
 C:\Users\EAHSCS\Downloads\0669_Code\0669_Code\Chapter05\Code\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Asteroid Belt Assault.pdb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Textures\SpriteSheet.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Textures\TitleScreen.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Explosion1.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Explosion2.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Explosion3.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Explosion4.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Shot1.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Shot2.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Fonts\Pericles14.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Asteroid Belt Assault.exe
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Asteroid Belt Assault.pdb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Asteroid Belt Assault.csprojResolveAssemblyReference.cache
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Asteroid Belt Assault.exe
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\obj\x86\Debug\Asteroid Belt Assault.pdb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\PewPew.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Pew.xnb
+C:\Users\eahscs\Documents\GitHub\AsteroidBeltAssault\Asteroid Belt Assault\Asteroid Belt Assault\Asteroid Belt Assault\bin\x86\Debug\Content\Sounds\Pew.wma
