@@ -17,7 +17,7 @@ namespace Asteroid_Belt_Assault
         public long PlayerScore = 0;
         public int LivesRemaining = 3;
         public bool Destroyed = false;
-
+        private bool isweeing = false;
         private Vector2 gunOffset = new Vector2(25, 10);
         private float shotTimer = 0.0f;
         private float minShotTimer = 0.2f;
@@ -85,16 +85,34 @@ namespace Asteroid_Belt_Assault
             if (keyState.IsKeyDown(Keys.Down))
             {
                 playerSprite.Velocity += new Vector2(0, 1);
+                if (playerSprite.Rotation <=3)
+              {
+                  if (playerSprite.Rotation < 0)
+                  {
+                      playerSprite.Rotation -= .1f;
+                      if (!isweeing)
+                      {
+                          isweeing = true;
+                          SoundManager.weeeee.Play();
+                      }
+                  }
+                  else if (playerSprite.Rotation >= 0)
+                      playerSprite.Rotation += .1f;
+              }
             }
 
             if (keyState.IsKeyDown(Keys.Left))
             {
                 playerSprite.Velocity += new Vector2(-1, 0);
+                if (playerSprite.Rotation >= -1.6)
+                    playerSprite.Rotation -= .1f;
             }
 
             if (keyState.IsKeyDown(Keys.Right))
             {
                 playerSprite.Velocity += new Vector2(1, 0);
+                if(playerSprite.Rotation <= 1.6)
+                    playerSprite.Rotation +=.1f;
             }
 
             if (keyState.IsKeyDown(Keys.Space))

@@ -10,3 +10,4 @@ Content\Fonts\Pericles14.xnb
 Content\Sounds\PewPew.xnb
 Content\Sounds\Pew.xnb
 Content\Sounds\Pew.wma
+Content\Sounds\Weeeeeee.xnb

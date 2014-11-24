@@ -18,6 +18,7 @@ namespace Asteroid_Belt_Assault
 
         private static SoundEffect playerShot;
         private static SoundEffect enemyShot;
+        public static SoundEffect weeeee;
 
         private static Random rand = new Random();
 
@@ -27,6 +28,7 @@ namespace Asteroid_Belt_Assault
             {
                 playerShot = content.Load<SoundEffect>(@"Sounds\PewPew");
                 enemyShot = content.Load<SoundEffect>(@"Sounds\Shot2");
+                weeeee = content.Load<SoundEffect>(@"Sounds\Weeeeeee");
 
                 for (int x = 1; x <= explosionCount; x++)
                 {
