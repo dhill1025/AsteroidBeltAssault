@@ -89,7 +89,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sounds\Weeeeeee.wav">
+    <Compile Include="Sounds\Weeeeeee %28wee%29 XD cutdown.wav">
       <Name>Weeeeeee</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
