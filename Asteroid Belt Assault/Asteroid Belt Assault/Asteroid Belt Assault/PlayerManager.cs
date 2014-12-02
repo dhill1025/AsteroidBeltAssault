@@ -81,6 +81,12 @@ namespace Asteroid_Belt_Assault
             if (keyState.IsKeyDown(Keys.Up))
             {
                 playerSprite.Velocity += new Vector2(0, -1);
+
+                if (playerSprite.Rotation >= 0)
+                    playerSprite.Rotation -= .1f;
+
+                if (playerSprite.Rotation <= 0)
+                    playerSprite.Rotation = .1f;
             }
 
             if (keyState.IsKeyDown(Keys.Down))
@@ -90,22 +96,25 @@ namespace Asteroid_Belt_Assault
                 {
                     if (playerSprite.Rotation < 0)
                     {
-                        playerSprite.Rotation -= .1f;
-                        if (!isweeing)
+                        
+                        
+                    }
+                    //else if (playerSprite.Rotation >= 0)
+                        //playerSprite.Rotation += .1f;
+                }
+            }
+
+            if (keyState.IsKeyDown(Keys.Q))
+                if (!isweeing)
                         {
                             isweeing = true;
                             SoundManager.weeeee.Play();
                         }
-                    }
-                    else if (playerSprite.Rotation >= 0)
-                        playerSprite.Rotation += .1f;
-                }
-            }
 
             if (keyState.IsKeyDown(Keys.Left))
             {
                 playerSprite.Velocity += new Vector2(-1, 0);
-                if (playerSprite.Rotation >= -1.6)
+                if (playerSprite.Rotation >= -.5)
                     playerSprite.Rotation -= .1f;
             }
 
@@ -113,7 +122,7 @@ namespace Asteroid_Belt_Assault
             {
                 isweeing = false;
                 playerSprite.Velocity += new Vector2(1, 0);
-                if (playerSprite.Rotation <= 1.6)
+                if (playerSprite.Rotation <= .5)
                 {
                     playerSprite.Rotation += .1f;
                 }

@@ -6,8 +6,8 @@ Content\Sounds\Explosion3.xnb
 Content\Sounds\Explosion4.xnb
 Content\Sounds\Shot1.xnb
 Content\Sounds\Shot2.xnb
-Content\Fonts\Pericles14.xnb
 Content\Sounds\PewPew.xnb
+Content\Sounds\Weeeeeee.xnb
+Content\Fonts\Pericles14.xnb
 Content\Sounds\Pew.xnb
 Content\Sounds\Pew.wma
-Content\Sounds\Weeeeeee.xnb
