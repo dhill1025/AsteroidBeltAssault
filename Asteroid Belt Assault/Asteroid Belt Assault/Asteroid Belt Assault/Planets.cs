@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Asteroid_Belt_Assault
@@ -16,52 +17,60 @@ namespace Asteroid_Belt_Assault
         private Color[] colors = { Color.White, Color.Yellow, 
                            Color.Wheat, Color.WhiteSmoke, 
                            Color.SlateGray };
+        private Texture2D texture;
 
-            public Planets(
+        public Planets(
             int screenWidth,
-            int screenHeight,
-            int planetCount,
-            Vector2 planetVelocity,
-            Texture2D texture,
-            Rectangle frameRectangle)
+            int screenHeight,            
+            Texture2D texture)
+            
         {
+            this.texture = texture;
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
-            for (int x = 0; x < planetCount; x++)
+
+            SpawnPlanet();
+        }
+
+
+        public void SpawnPlanet()
+        {
+            int choice = rand.Next(0, 5);
+            Rectangle frameRectangle = new Rectangle(0, 0, 0, 0);
+
+            switch (choice)
             {
-                planets.Add(new Sprite(
-                    new Vector2(rand.Next(0, screenWidth),
-                        rand.Next(0, screenHeight)),
-                    texture,
-                    frameRectangle,
-                    planetVelocity));
-                Color starColor = colors[rand.Next(0, colors.Count())];
-                starColor *= (float)(rand.Next(30, 80) / 100f); planets[planets.Count() - 1].TintColor = starColor;
+                case 0: frameRectangle = new Rectangle(0, 0, 370, 370); break;
+                case 1: frameRectangle = new Rectangle(0, 370, 138, 138); break;
+                case 2: frameRectangle = new Rectangle(380, 343, 152, 152); break;
+                case 3: frameRectangle = new Rectangle(390, 15, 285, 285); break;
+                case 4: frameRectangle = new Rectangle(697, 258, 217, 217); break;
             }
+            
+
+            planets.Add(new Sprite(
+                new Vector2(rand.Next(0, screenWidth),
+                    -100),
+                texture,
+                frameRectangle,
+                new Vector2(0, -20)));
+
         }
 
         public void Update(GameTime gameTime)
         {
-            foreach (Sprite planet in planets)
-            {
-                planets[i].Update(gameTime);
-                if (planet.Location.Y > screenHeight)
-                {
-                    planet.Location = new Vector2(
-                        rand.Next(0, screenWidth), 0);
-                }
-            }
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (Sprite planet in planets)
+            for (int i = 0; i < planets.Count; i++)
             {
-                planets.Draw(spriteBatch);
+                planets[i].Draw(spriteBatch);
             }
         }
 
     }
 
     }
-}
+
