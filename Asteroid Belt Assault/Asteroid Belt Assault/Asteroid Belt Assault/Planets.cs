@@ -13,6 +13,7 @@ namespace Asteroid_Belt_Assault
         private List<Sprite> planets = new List<Sprite>();
         private int screenWidth = 800;
         private int screenHeight = 600;
+        
         private Random rand = new Random();
         private Color[] colors = { Color.White, Color.Yellow, 
                            Color.Wheat, Color.WhiteSmoke, 
@@ -21,13 +22,15 @@ namespace Asteroid_Belt_Assault
 
         public Planets(
             int screenWidth,
-            int screenHeight,            
+            int screenHeight,
+            Vector2 planetVelocity,
             Texture2D texture)
             
         {
             this.texture = texture;
             this.screenWidth = screenWidth;
             this.screenHeight = screenHeight;
+
 
             SpawnPlanet();
         }
@@ -36,6 +39,7 @@ namespace Asteroid_Belt_Assault
         public void SpawnPlanet()
         {
             int choice = rand.Next(0, 5);
+            int planetCount = 1;
             Rectangle frameRectangle = new Rectangle(0, 0, 0, 0);
 
             switch (choice)
@@ -46,20 +50,39 @@ namespace Asteroid_Belt_Assault
                 case 3: frameRectangle = new Rectangle(390, 15, 285, 285); break;
                 case 4: frameRectangle = new Rectangle(697, 258, 217, 217); break;
             }
-            
 
-            planets.Add(new Sprite(
+
+            for (int x = 0; x < planetCount; x++)
+            {
+                planets.Add(new Sprite(
                 new Vector2(rand.Next(0, screenWidth),
                     -100),
                 texture,
                 frameRectangle,
                 new Vector2(0, -20)));
+            }
+
+            for (int i = 0; i < planetCount; i++)
+            {
+                planets = new Planets (
+            }
 
         }
 
         public void Update(GameTime gameTime)
         {
-            
+            foreach (Sprite planet in planets)
+            {
+                planet.Update(gameTime);
+                if (planet.Location.Y > screenHeight)
+                {
+                    planet.Location = new Vector2(
+                        rand.Next(0, screenWidth), 0);
+                }
+            }
+
+
+
         }
 
         public void Draw(SpriteBatch spriteBatch)

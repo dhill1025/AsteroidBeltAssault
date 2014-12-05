@@ -23,6 +23,7 @@ namespace Asteroid_Belt_Assault
         GameStates gameState = GameStates.TitleScreen;
         Texture2D titleScreen;
         Texture2D spriteSheet;
+        
         Texture2D planetsheet;
         Sprite planets;
 
@@ -81,13 +82,11 @@ namespace Asteroid_Belt_Assault
             spriteSheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
             planetsheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
 
-            planetManager = new planets(
+            planetManager = new Planets(
                 this.Window.ClientBounds.Width,
                 this.Window.ClientBounds.Height,
-                200,
                 new Vector2(0, 30f),
-                planetsheet,
-                new Rectangle(0, 450, 2, 2));
+                planetsheet);
 
             starField = new StarField(
                 this.Window.ClientBounds.Width,
