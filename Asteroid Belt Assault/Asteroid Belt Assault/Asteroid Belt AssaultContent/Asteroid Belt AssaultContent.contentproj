@@ -96,7 +96,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="planetsheet.png">
+    <Compile Include="Textures\planetsheet.png">
       <Name>planetsheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>

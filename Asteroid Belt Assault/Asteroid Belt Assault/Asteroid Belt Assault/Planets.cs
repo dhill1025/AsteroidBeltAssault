@@ -39,47 +39,42 @@ namespace Asteroid_Belt_Assault
         public void SpawnPlanet()
         {
             int choice = rand.Next(0, 5);
-            int planetCount = 1;
-            Rectangle frameRectangle = new Rectangle(0, 0, 0, 0);
 
+            Rectangle frameRectangle = new Rectangle(0, 0, 0, 0);
+            
             switch (choice)
             {
                 case 0: frameRectangle = new Rectangle(0, 0, 370, 370); break;
                 case 1: frameRectangle = new Rectangle(0, 370, 138, 138); break;
                 case 2: frameRectangle = new Rectangle(380, 343, 152, 152); break;
                 case 3: frameRectangle = new Rectangle(390, 15, 285, 285); break;
-                case 4: frameRectangle = new Rectangle(697, 258, 217, 217); break;
+                case 4: frameRectangle = new Rectangle(700, 285, 217, 217); break;
             }
 
+            Sprite planet = new Sprite(new Vector2(rand.Next(100,this.screenWidth-100), -400), texture, frameRectangle, new Vector2(0, 50));
+            planet.TintColor = new Color(0.5f, 0.5f, 0.5f);
 
-            for (int x = 0; x < planetCount; x++)
-            {
-                planets.Add(new Sprite(
-                new Vector2(rand.Next(0, screenWidth),
-                    -100),
-                texture,
-                frameRectangle,
-                new Vector2(0, -20)));
-            }
-
-            for (int i = 0; i < planetCount; i++)
-            {
-                planets = new Planets (
-            }
+            planets.Add(planet);
+           //     planets = new Planets(600, 800, new Vector2(0, 10), (rand.choice))
+            
 
         }
 
         public void Update(GameTime gameTime)
         {
-            foreach (Sprite planet in planets)
+            for (int i = planets.Count-1; i >= 0; i--)
             {
+                Sprite planet = planets[i];
+
                 planet.Update(gameTime);
-                if (planet.Location.Y > screenHeight)
+                if (planet.Location.Y > screenHeight + 400)
                 {
-                    planet.Location = new Vector2(
-                        rand.Next(0, screenWidth), 0);
+                    planets.RemoveAt(i);
+                    SpawnPlanet();
                 }
             }
+            
+
 
 
 

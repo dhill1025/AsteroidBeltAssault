@@ -80,7 +80,7 @@ namespace Asteroid_Belt_Assault
 
             titleScreen = Content.Load<Texture2D>(@"Textures\TitleScreen");
             spriteSheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
-            planetsheet = Content.Load<Texture2D>(@"Textures\spriteSheet");
+            planetsheet = Content.Load<Texture2D>(@"Textures\planetSheet");
 
             planetManager = new Planets(
                 this.Window.ClientBounds.Width,
@@ -209,6 +209,7 @@ namespace Asteroid_Belt_Assault
                     enemyManager.Update(gameTime);
                     explosionManager.Update(gameTime);
                     collisionManager.CheckCollisions();
+                    planetManager.Update(gameTime);
 
                     if (playerManager.Destroyed)
                     {
@@ -236,6 +237,7 @@ namespace Asteroid_Belt_Assault
                     enemyManager.Update(gameTime);
                     playerManager.PlayerShotManager.Update(gameTime);
                     explosionManager.Update(gameTime);
+                    planetManager.Update(gameTime);
 
                     if (playerDeathTimer >= playerDeathDelayTime)
                     {
@@ -248,6 +250,7 @@ namespace Asteroid_Belt_Assault
                     playerDeathTimer +=
                         (float)gameTime.ElapsedGameTime.TotalSeconds;
                     starField.Update(gameTime);
+                    planetManager.Update(gameTime);
                     asteroidManager.Update(gameTime);
                     enemyManager.Update(gameTime);
                     playerManager.PlayerShotManager.Update(gameTime);
@@ -286,6 +289,7 @@ namespace Asteroid_Belt_Assault
                 (gameState == GameStates.GameOver))
             {
                 starField.Draw(spriteBatch);
+                planetManager.Draw(spriteBatch);
                 asteroidManager.Draw(spriteBatch);
                 playerManager.Draw(spriteBatch);
                 enemyManager.Draw(spriteBatch);
